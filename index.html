@@ -1450,43 +1450,6 @@ search.addEventListener('input',()=>{
     c.style.display=(any||q==='')?'':'none';
   });
 });
-<script>
-const fixPinyinMap = {
-  "zhèng 坐": "zhèng zuò",
-  "仰 卧": "yǎng wò",
-  "俯 卧": "fǔ wò",
-  "俯 zhǎng": "fǔ zhǎng",
-  "仰 zhǎng": "yǎng zhǎng",
-  "坐 或 站": "zuò huò zhàn",
-  "坐 或 俯 卧": "zuò huò fǔ wò",
-  "zhèng 坐 或 仰 卧": "zhèng zuò huò yǎng wò",
-  "仰 卧 或 zhèng 坐": "yǎng wò huò zhèng zuò",
-  "微 qū zhǒu 仰 zhǎng": "wēi qū zhǒu yǎng zhǎng",
-  "低 tóu": "dī tóu",
-  "cè 卧": "cè wò",
-  "cè 卧 qū 髋": "cè wò qū kuān",
-  "liǎng shǒu 虎 kǒu jiāo 叉": "liǎng shǒu hǔ kǒu jiāo chā",
-  "感 冒": "gǎn mào",
-  "fù 泻": "fù xiè",
-  "泄 泻": "xiè xiè",
-  "ěr 聋": "ěr lóng",
-  "肾 xū": "shèn xū",
-  "肝 huǒ": "gān huǒ",
-  "疝 qì": "shàn qì",
-  "妇 科": "fù kē",
-  "bǔ 肾 zhù yáng": "bǔ shèn zhù yáng",
-  "shàng 肢 wú lì": "shàng zhī wú lì",
-  "xià 肢 má mù": "xià zhī má mù"
-};
-
-document.querySelectorAll(".py").forEach(el => {
-  let text = el.textContent.trim();
-  Object.keys(fixPinyinMap).forEach(key => {
-    text = text.replaceAll(key, fixPinyinMap[key]);
-  });
-  el.textContent = text;
-});
-</script>
 </script>
 </body>
 </html>
